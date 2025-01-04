@@ -31,6 +31,24 @@ torch==1.13.1+cu117
 
 torchvision=0.14.1+cu117
 
+```
+conda create -n facmic_env python=3.8
+conda activate facmic_env
+
+pip install git+https://github.com/openai/CLIP.git
+
+pip install numpy==1.22.0
+pip install opencv-python==4.9.0.80
+pip install openpyxl==3.1.2
+pip install Pillow==9.3.0
+pip install scikit-image==0.21.0
+pip install scikit-learn==1.1.3
+pip install scipy==1.10.0
+pip install tqdm==4.66.1
+
+conda install pytorch==1.13.1 torchvision==0.14.1 pytorch-cuda=11.7 -c pytorch -c nvidia
+```
+
 ## How to use
 
 ### main.py 
