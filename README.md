@@ -104,3 +104,34 @@ Here is a case study about the structure of our dataset as follows:
     client_3/
 ```
 We provide BrainTumor data as an example. you can download it via https://drive.google.com/drive/folders/1__sN_2857bnhjJdEoBR48dweXRqM_ZsA?usp=sharing.
+
+## Run
+
+Run with default parameters
+
+``python main.py``
+
+Run with custom parameters
+
+``python main.py --dataset BrainTumor --n_clients 4 --test_envs 3 --iters 50 --wk_iters 1``
+
+## N. B.
+
+Important Code Flow:
+
+1. The code initializes a CLIP model for each client
+2. Uses client 3 (index [3]) as the global test set by default
+3. Performs federated learning across clients 0, 1, and 2
+4. Uses CLIP embeddings for feature extraction
+5. Implements domain adaptation using LMMD loss
+6. Aggregates models using attention-based mechanism
+
+
+Key Requirements:
+
+1. CLIP
+2. PyTorch
+3. The dataset should be organized in client folders
+4. Each client folder should have the same class structure
+
+Remember to update ``adaptation.py`` to set the correct number of classes (4 for BrainTumor dataset) and adjust ``clip_util.py`` settings based on which federated learning method you're using (FACMIC, FedCLIP, etc.).
