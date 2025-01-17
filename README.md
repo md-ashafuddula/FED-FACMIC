@@ -113,6 +113,8 @@ Run with default parameters
 
 Run with custom parameters
 
+``python main.py --batch 16 # To fasciliate less memory``
+
 ``python main.py --dataset BrainTumor --n_clients 4 --test_envs 3 --iters 50 --wk_iters 1``
 
 ## N. B.
