@@ -107,7 +107,7 @@ We provide BrainTumor data as an example. you can download it via https://drive.
 
 ## Run
 
-``cd /Project-Code/Fed-Learning/FED-FACMIC-code$ ``
+``cd "Project-Code/Fed-Learning/FED-FACMIC-code" ``
 
 Run with default parameters
 
